@@ -14,7 +14,7 @@ This should be done before starting anything else. Make a `GET` request to
 
     https://battleship-server-abyrne55.c9.io/test.php
 
-The server will reply `ready` if you're okay to proceeed. Anything else is an error.
+The server will reply `ready` if you're okay to proceeed. Anything else is error. 5 yard penalty.
 
 ### Starting A Game (Inserting) ###
 Make a `GET` request to
@@ -28,7 +28,7 @@ Make a `POST` request to
 
     https://battleship-server-abyrne55.c9.io/message_put.php?id=[GAMEID]
     
-Replace `[GAMEID]` with your actual Game ID (receieved from the insert page). If an `HTTP 500` error is received, then you probably specified an invalid Game ID. 
+Replace `[GAMEID]` with your actual Game ID (receieved from the insert page) and include the content of your message in the `message` field of your `POST` data. If an `HTTP 500` error is received, then you probably specified an invalid Game ID. 
 
 ### Picking up a Message (Fetching) ###
 Make a `GET` request to
